@@ -1,0 +1,62 @@
+﻿@model IEnumerable<ReScheduler.ViewModels.PassVM>
+
+@{
+    ViewBag.Title = "ConsolidatedSchedule";
+}
+
+<h2>Consolidated Schedule</h2>
+
+<p>
+   <b>NOTE:</b> Some events may have been removed due to scheduling conflicts. View the individual schedules for complete information.
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Details)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StartTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EndTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ReminderTimeMinutes)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.WantReminder)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Details)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.StartTime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EndTime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ReminderTimeMinutes)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.WantReminder)
+        </td>
+    </tr>
+}
+
+</table>
+<p>
+    @Html.ActionLink("Back To Home Page", "Index", "Home")
+</p>
+

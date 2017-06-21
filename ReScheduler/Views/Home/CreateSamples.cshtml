@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewBag.Title = "Sample Data Created";
+}
+
+<h2>Samples Created.</h2>
+<p>Check your Documents folder for three files:</p>
+<p>
+    <ul>
+        <li><b>workcalendar.json</b> - Contains work-related calendar info.</li>
+        <li><b>exercisecalendar.json</b> - Contains exercise/gym related calendar info.</li>
+        <li><b>socialcalendar.json</b> - Contains private schedule and social events.</li>
+    </ul>
+</p>
+<p>All these files can be safely deleted once you're done with the sample application. They can also  be recreated at the click of a link from the @Html.ActionLink("Home", "Index", "Home") page.</p>
+<p>In the meantime, you can edit them in your favorite editor to add, remove or edit information.</p>
+
+<p>
+    @Html.ActionLink("Back To Home Page", "Index", "Home")
+</p>
